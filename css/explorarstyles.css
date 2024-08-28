@@ -72,12 +72,6 @@ h2 {
     margin-bottom: 20px; 
 }
 
-img {
-    width: 80%;
-    border-radius: 10%;
-    cursor: pointer;
-}
-
 .bg-secondary {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important
