@@ -34,6 +34,9 @@ h2 {
     color: #fff;
 }
 
+.card {
+    color: #ffffff;
+}
 .content .card {
     position: relative;
     border: none;
@@ -81,4 +84,8 @@ img {
 .bg-secondary {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important
+}
+
+p {
+    color: #ffffff;
 }
