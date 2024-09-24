@@ -1,0 +1,48 @@
+body {
+    font-family: $font-family;
+    background-color: $fondo-etiquetas;
+    color: $color-texto;
+    margin: 0;
+}
+
+img {
+  width: 100%;
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-family: $font-family;
+        color: $color-texto;
+    }
+
+    p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: $color-texto;
+    }
+}
+
+.seccion-mision,
+.seccion-historia {
+    padding: 40px 20px;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: $color-texto;
+        font-family: $font-family;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+}
+

@@ -1,0 +1,150 @@
+.barranavegacion2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logositio2 {
+    img {
+      max-width: 120px;
+    }
+  }
+
+  .botontoggle2 {
+    background-color: transparent;
+    border: none;
+    color: $color-primario;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .lista-nav2 {
+    ul {
+      display: flex;
+      gap: 15px;
+
+      .itemnav2 {
+        .enlace-nav2 {
+          color: $color-primario;
+          padding: 10px 15px;
+          border-radius: 0%;
+          text-decoration: none;
+          transition: background 0.3s;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.menu12 {
+padding: 50px 20px;
+text-align: center;
+
+.hero12 {
+  background: linear-gradient(to right, $color-primario, $color-secundario);
+  color: $color-texto;
+  padding: 50px;
+  border-radius: 0%;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.artistasrecomendados2 {
+  margin-top: 30px;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .d-flex12 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card12 {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0%;
+      overflow: hidden;
+      width: 24%;
+      height: 25%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      a {
+        img {
+          border-bottom: 2px solid $color-primario;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cardbody2 {
+        padding: 15px;
+
+        .cardtitle2 {
+          color: $color-texto;
+          margin-bottom: 10px;
+        }
+
+        .cardtext2 {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+      }
+
+      .cardfooter2 {
+        background-color: $color-texto;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+
+        a {
+          color: $color-secundario;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+.card-img-top2 {
+  width: 100%;
+}
+
+.footer12 {
+background-color: rgba(34, 34, 34, 0.9);
+padding: 20px;
+text-align: center;
+
+.p12 {
+  margin: 0;
+  color: $color-texto;
+  font-size: 0.9rem;
+}
+}

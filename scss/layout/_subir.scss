@@ -1,0 +1,93 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: $color-primario;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    text-align: center;
+    font-family: $font-family;
+    color: $color-primario;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: $color-texto;
+  }
+
+  form {
+    // Fieldset Styling
+    fieldset {
+      border: 2px solid $color-primario;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: $fondo-etiquetas;
+
+      legend {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-primario;
+        margin-bottom: 1rem;
+      }
+
+      .mb-3 {
+        color: $color-texto;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          color: $color-texto;
+        }
+
+        .form-control,
+        .form-select,
+        .input-newsletter {
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
+          font-size: 1rem;
+          transition: border-color 0.3s, box-shadow 0.3s;
+
+          &:focus {
+            border-color: $color-primario;
+            box-shadow: 0 0 5px rgba($color-primario, 0.5);
+            outline: none;
+          }
+        }
+
+        textarea.form-control {
+          resize: vertical;
+        }
+
+        // Styling para el input de tipo file
+        input[type="file"] {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    // Botón de Envío
+    .btn-primary {
+      background-color: $color-secundario;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: $color-secundario;
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+

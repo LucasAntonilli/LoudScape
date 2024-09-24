@@ -1,107 +1,227 @@
+
+@mixin transition($property) {
+  transition: $property 0.3s ease;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@import './utilities/variables.scss'; 
+@import './utilities/mixins.scss';   
+@import './layout/explorar';
+@import './layout/artista';
+@import './layout/subir';
+@import './layout/sobrenosotros';
+
 body {
-  background-image: url(../assets/background.jpg);
-  width: 100vp;
-  color: #fff;
+    font-family: $font-family;
+    background: $fondo; 
+    color: $color-texto;
+    margin: 0;
 }
 
-h1 {
-  color: #fff;
-}
-
-h5 {
-  color: #fff;
-}
-
-p {
-  color: #fff;
-}
-
-.card-body {
-  width: 100%;
-}
-
-img {
-  width: 100%;
-}
-
-.card-img {
-  width: 15%;
-}
-
-.card {
-  --bs-card-bg: #1a52ec54;
-  color: #fff;
-  --bs-card-border-color: rgb(255 255 255 / 18%);
-  border-width: revert;
-}
-
-.bg-secondary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, 0.26) !important;
-}
 
 li {
   list-style: none;
 }
 
-.bg-dark {
-  --bs-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, 0.26) !important;
+.encabezado-principal {
+    .barra-navegacion {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-primario;
+
+        .logo-sitio {
+            img {
+                max-width: 120px;
+                height: auto;
+            }
+        }
+
+        .boton-toggle {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .lista-nav {
+            display: flex;
+            gap: 15px;
+
+            .item-nav {
+                .enlace-nav {
+                    color: white;
+                    font-weight: bold;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background 0.3s;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
 }
 
+.seccion-hero {
+    background-size: cover;
+    background-position: center;
+    color: $color-texto;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
 
-h1{
-    color: #fff;
+    .contenido-hero {
+        position: relative;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 30px;
+        border-radius: 10px;
+
+        .titulo {
+          font-size: 3.5rem;
+          margin-bottom: 20px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+          color: $color-texto;
+      }
+
+        .titulo-hero {
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            color: $color-texto;
+        }
+
+        .descripcion-hero {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            color: $color-texto;
+        }
+
+        .boton-cta {
+            background-color: $color-secundario;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            transition: background 0.3s, transform 0.3s;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darken($color-secundario, 10%);
+                transform: scale(1.05); 
+            }
+        }
+    }
 }
 
-h5 {
-    color: #fff;
-}
-p {
-    color: #fff;
+.seccion-caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+
+    .item-caracteristica {
+        background: $fondo-etiquetas;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 30%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        .titulo-caracteristica {
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+          color: $color-texto;
+            margin-bottom: 10px;
+        }
+
+        .descripcion-caracteristica {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    }
 }
 
-.card-body {
-    width: 100%;
-}
+.pie-sitio {
+    background-color: $color-primario;
+    color: white;
+    padding: 20px;
+    text-align: center;
 
-img {
-    width: 100%;
-}
+    .contenido-pie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.card-img {
-    width: 15%;
-}
+        .enlaces-pie {
+            margin-bottom: 15px;
+            a {
+                color: white;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color 0.3s;
 
-.card{
-    --bs-card-bg: #1a52ec54;
-    color: #fff;
-    --bs-card-border-color: rgb(255 255 255 / 18%);
-    border-width: revert;
-}
+                &:hover {
+                    color: $color-secundario;
+                }
+            }
+        }
 
-.bg-secondary {
-    --bs-bg-opacity: 1;
-    background-color: rgb(0 0 0 / 26%) !important;
-}
+        .redes-sociales {
+            margin-bottom: 15px;
+            .icono-social {
+                margin: 0 10px;
+                color: white;
+                transition: color 0.3s;
 
-li {
-    list-style: none;
-}
+                &:hover {
+                    color: $color-secundario;
+                }
+            }
+        }
 
-.bg-dark {
-    --bs-bg-opacity: 1;
-    background-color:rgba(0, 0, 0, 0.26) !important;
-}
+        .suscripcion-newsletter {
+            margin-bottom: 15px;
+            form {
+                display: flex;
+                gap: 10px;
 
-.card-img {
-    overflow: hidden;
-}
+                .input-newsletter {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                }
 
-.card-img img {
-    transition: transform 0.3s ease;
-}
+                .boton-newsletter {
+                    background-color: $color-secundario;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    transition: background 0.3s;
 
-.card-img img:hover {
-    transform: scale(1.2);
+                    &:hover {
+                        background-color: darken($color-secundario, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .texto-pie {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
 }

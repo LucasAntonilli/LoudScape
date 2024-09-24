@@ -15,84 +15,75 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./index.html">
-                        <img src="./assets/logo.png" alt="LoudScape" class="navbar-logo" href="./index.html">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/explorar.html">Explorar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/artista.html">Artistas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/subir.html">Subir Música</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/sobrenosotros.html">Sobre Nosotros</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <section class="hero1">
-            <div class="hero-content">
-                <h1>Explora el Ritmo de tu Vida</h1>
-                <p>Sumérgete en una experiencia musical sin igual. ¡Descubre, escucha y crea!</p>
-                <a href="./pages/explorar.html" class="btn">Comienza Ahora</a>
+    <header class="encabezado-principal">
+        <nav class="barra-navegacion">
+            <div class="logo-sitio">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="LoudScape">
+                </a>
             </div>
-        </section>
+            <button class="boton-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse lista-nav" id="navbarNav">
+                <ul class="lista-nav">
+                    <li class="item-nav"><a class="enlace-nav" href="./index.html">Inicio</a></li>
+                    <li class="item-nav"><a class="enlace-nav" href="./pages/explorar.html">Explorar</a></li>
+                    <li class="item-nav"><a class="enlace-nav" href="./pages/artista.html">Artistas</a></li>
+                    <li class="item-nav"><a class="enlace-nav" href="./pages/subir.html">Subir Música</a></li>
+                    <li class="item-nav"><a class="enlace-nav" href="./pages/sobrenosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="seccion-hero">
+        <div class="contenido-hero">
+            <h1 class="titulo">LoudScape</h1>
+            <h2 class="titulo-hero">Explora el Ritmo de tu Vida</h2>
+            <p class="descripcion-hero">Sumérgete en una experiencia musical sin igual. ¡Descubre, escucha y crea!</p>
+            <a href="./pages/explorar.html" class="boton-cta">Comienza Ahora</a>
+        </div>
+    </section>
     
-        <section class="features">
-            <div class="feature">
-                <h2>Nuevas Releases</h2>
-                <p>Lo último en música para ti.</p>
-            </div>
-            <div class="feature">
-                <h2>Recomendaciones Personalizadas</h2>
-                <p>Playlist hechas a tu medida.</p>
-            </div>
-            <div class="feature">
-                <h2>Artistas Destacados</h2>
-                <p>Los mejores artistas del momento.</p>
-            </div>
-        </section>
+    <section class="seccion-caracteristicas">
+        <div class="item-caracteristica">
+            <h2 class="titulo-caracteristica">Nuevas Releases</h2>
+            <p class="descripcion-caracteristica">Lo último en música para ti.</p>
+        </div>
+        <div class="item-caracteristica">
+            <h2 class="titulo-caracteristica">Recomendaciones Personalizadas</h2>
+            <p class="descripcion-caracteristica">Playlist hechas a tu medida.</p>
+        </div>
+        <div class="item-caracteristica">
+            <h2 class="titulo-caracteristica">Artistas Destacados</h2>
+            <p class="descripcion-caracteristica">Los mejores artistas del momento.</p>
+        </div>
+    </section>
     
-        <footer>
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="./pages/sobrenosotros.html">Política de Privacidad</a>
-                    <a href="./pages/sobrenosotros.html">Términos de Servicio</a>
-                    <a href="./pages/sobrenosotros.html">Ayuda</a>
-                    <a href="./pages/sobrenosotros.html">Contacto</a>
-                </div>
-                <div class="social-media">
-                    <a href="https://m.youtube.com/?hl=es" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                    <a href="https://twitter.com/?lang=es" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i> Twitter</a>
-                    <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                </div>
-                <div class="newsletter">
-                    <p>¡Únete a nuestra comunidad!</p>
-                    <form action="#">
-                        <input type="email" placeholder="Tu email" required>
-                        <button type="submit">Suscribirse</button>
-                    </form>
-                </div>
+    <footer class="pie-sitio">
+        <div class="contenido-pie">
+            <div class="enlaces-pie">
+                <a href="./pages/sobrenosotros.html">Política de Privacidad</a>
+                <a href="./pages/sobrenosotros.html">Términos de Servicio</a>
+                <a href="./pages/sobrenosotros.html">Ayuda</a>
+                <a href="./pages/sobrenosotros.html">Contacto</a>
             </div>
-            <p>&copy; 2024 LoudScape</p>
-        </footer>
+            <div class="redes-sociales">
+                <a href="https://m.youtube.com/?hl=es" target="_blank" class="icono-social"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" class="icono-social"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://twitter.com/?lang=es" target="_blank" class="icono-social"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com/" target="_blank" class="icono-social"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="suscripcion-newsletter">
+                <p>¡Únete a nuestra comunidad!</p>
+                <form action="#">
+                    <input type="email" placeholder="Tu email" required class="input-newsletter">
+                    <button type="submit" class="boton-newsletter">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <p class="texto-pie">&copy; 2024 LoudScape</p>
+    </footer>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
