@@ -1,185 +1,183 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: $color-primario;
-    margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: $color-primario;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenido3 {
+  background-color: $fondo-etiquetas;
+  .container3 {
+    padding: 2rem;
+    color: $color-texto;
+
+  
+    h1 {
+      text-align: center;
+      color: $color-texto;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: lighten($color-texto, 20%);
+    }
+
+    background-size: cover;
+    position: relative;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+
+    * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.encabezado-principal3 {
+  background-color: $color-primario;
+  padding: 1rem;
+  
+  .barra-navegacion3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-sitio3 img {
+      max-width: 150px;
+    }
+
+    .boton-toggle3 {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .lista-nav3 {
+      list-style: none;
+      padding: 0;
+
+      .item-nav3 {
+        display: inline-block;
+        margin: 0 1rem;
+
+        .enlace-nav3 {
+          color: $color-texto;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: lighten($color-texto, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu3 {
+  flex: 1;
+  padding: 2rem 1rem;
+
+  .contenido3 {
+      background-image: url(../../assets/fondoartista.jpg);
+  }
+
+  .hero3 {
+    background: darken($color-primario, 10%);
+    padding: 2rem;
+    border-radius: 5px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .card-body3 {
+     width: 100%;
+  }
+
+  .card-img {
+      width: 12%;
+  }
+
+  .content3 {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .contenido3 {
-    background-color: $fondo-etiquetas;
-    .container3 {
-      padding: 2rem;
-      color: $color-texto;
-  
-    
-      h1 {
-        text-align: center;
-        color: $color-texto;
-        font-size: 2.5rem;
+    align-items: center;
+
+    .canciones3,
+    .playlists3 {
+      margin-top: 2rem;
+      width: 100%;
+
+      h2 {
+        font-size: 1.8rem;
         margin-bottom: 1.5rem;
+        text-align: center;
       }
-  
-      p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        color: lighten($color-texto, 20%);
-      }
-  
-      // Aplicamos la imagen de fondo para la sección de Gustavo Cerati
-      background-size: cover;
-      position: relative;
-      padding: 4rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  
-  
-      // El contenido dentro de la sección estará encima del overlay
-      * {
-        position: relative;
-        z-index: 2;
-      }
-    }
-  }
-  .encabezado-principal3 {
-    background-color: $color-primario;
-    padding: 1rem;
-    
-    .barra-navegacion3 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  
-      .logo-sitio3 img {
-        max-width: 150px;
-      }
-  
-      .boton-toggle3 {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-      }
-  
-      .lista-nav3 {
-        list-style: none;
-        padding: 0;
-  
-        .item-nav3 {
-          display: inline-block;
-          margin: 0 1rem;
-  
-          .enlace-nav3 {
-            color: $color-texto;
-            text-decoration: none;
-            transition: color 0.3s;
-  
-            &:hover {
-              color: lighten($color-texto, 10%);
+
+      .d-flex3 {
+        display: flex;
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        gap: 1.5rem;
+        justify-content: center;
+
+        .card3 {
+          background: $color-secundario;
+          border: none;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.2s;
+          flex: 0 0 auto; 
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          .card-body3 {
+            text-align: center;
+
+            img {
+              width: 100%;
+              height: auto;
+              border-bottom: 2px solid $color-primario;
+              transition: transform 0.3s;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+
+            .card-title3 {
+              font-size: 1.2rem;
+              margin-top: 0.5rem;
+              color: $color-texto;
             }
           }
         }
       }
     }
   }
-  
-  .menu3 {
-    flex: 1;
-    padding: 2rem 1rem;
+}
 
-    .contenido3 {
-        background-image: url(../../assets/fondoartista.jpg);
-    }
-  
-    .hero3 {
-      background: darken($color-primario, 10%);
-      padding: 2rem;
-      border-radius: 5px;
-  
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-  
-      p {
-        font-size: 1.2rem;
-      }
-    }
-  
-    .card-body3 {
-       width: 100%;
-    }
+.footer3 {
+  background-color: $color-secundario;
+  padding: 1rem;
 
-    .card-img {
-        width: 12%;
-    }
-
-    .content3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      .canciones3,
-      .playlists3 {
-        margin-top: 2rem;
-        width: 100%;
-  
-        h2 {
-          font-size: 1.8rem;
-          margin-bottom: 1.5rem;
-          text-align: center;
-        }
-  
-        .d-flex3 {
-          display: flex;
-          flex-wrap: nowrap; // Cambiado para evitar que se envuelvan
-          overflow-x: auto; // Habilita desplazamiento horizontal
-          gap: 1.5rem;
-          justify-content: center;
-  
-          .card3 {
-            background: $color-secundario;
-            border: none;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s;
-            flex: 0 0 auto; // Mantiene el tamaño del card
-  
-            &:hover {
-              transform: scale(1.05);
-            }
-  
-            .card-body3 {
-              text-align: center;
-  
-              img {
-                width: 100%;
-                height: auto;
-                border-bottom: 2px solid $color-primario;
-                transition: transform 0.3s;
-  
-                &:hover {
-                  transform: scale(1.1);
-                }
-              }
-  
-              .card-title3 {
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-                color: $color-texto;
-              }
-            }
-          }
-        }
-      }
-    }
+  p {
+    margin: 0;
   }
-  
-  .footer3 {
-    background-color: $color-secundario;
-    padding: 1rem;
-  
-    p {
-      margin: 0;
-    }
-  }
+}

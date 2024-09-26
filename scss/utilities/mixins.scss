@@ -1,8 +1,31 @@
-// mixins.scss
 @mixin transition($property) {
   transition: $property 0.3s ease;
 }
 
 @mixin box-shadow($shadow) {
   box-shadow: $shadow;
+}
+
+@mixin consulta-medios($dispositivo) {
+  @if $dispositivo == movil-pequeno {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if $dispositivo == movil-mediano {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $dispositivo == tableta {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $dispositivo == escritorio {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $dispositivo == escritorio-grande {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
 }

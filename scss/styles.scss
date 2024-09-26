@@ -1,14 +1,6 @@
-
-@mixin transition($property) {
-  transition: $property 0.3s ease;
-}
-
-@mixin box-shadow($shadow) {
-  box-shadow: $shadow;
-}
-
 @import './utilities/variables.scss'; 
-@import './utilities/mixins.scss';   
+@import './utilities/mixins.scss';
+@import './utilities/media.scss';  
 @import './layout/explorar';
 @import './layout/artista';
 @import './layout/subir';
@@ -21,207 +13,206 @@ body {
     margin: 0;
 }
 
-
 li {
   list-style: none;
 }
 
 .encabezado-principal {
-    .barra-navegacion {
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $color-primario;
+  .barra-navegacion {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primario;
 
-        .logo-sitio {
-            img {
-                max-width: 120px;
-                height: auto;
-            }
-        }
-
-        .boton-toggle {
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .lista-nav {
-            display: flex;
-            gap: 15px;
-
-            .item-nav {
-                .enlace-nav {
-                    color: white;
-                    font-weight: bold;
-                    padding: 8px 12px;
-                    border-radius: 5px;
-                    transition: background 0.3s;
-                    text-decoration: none;
-
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.1);
-                    }
-                }
-            }
-        }
+    .logo-sitio {
+      img {
+        max-width: 120px;
+        height: auto;
+      }
     }
+
+    .boton-toggle {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .lista-nav {
+      display: flex;
+      gap: 15px;
+
+      .item-nav {
+        .enlace-nav {
+          color: white;
+          font-weight: bold;
+          padding: 8px 12px;
+          border-radius: 5px;
+          transition: background 0.3s;
+          text-decoration: none;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+  }
 }
 
-.seccion-hero {
-    background-size: cover;
-    background-position: center;
-    color: $color-texto;
-    padding: 120px 20px;
-    text-align: center;
+.seccion1 {
+  background-size: cover;
+  background-position: center;
+  color: $color-texto;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+
+  .contenido1 {
     position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 
-    .contenido-hero {
-        position: relative;
-        z-index: 2;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 30px;
-        border-radius: 10px;
-
-        .titulo {
-          font-size: 3.5rem;
-          margin-bottom: 20px;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-          color: $color-texto;
-      }
-
-        .titulo-hero {
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            color: $color-texto;
-        }
-
-        .descripcion-hero {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-            color: $color-texto;
-        }
-
-        .boton-cta {
-            background-color: $color-secundario;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 50px;
-            transition: background 0.3s, transform 0.3s;
-            text-decoration: none;
-
-            &:hover {
-                background-color: darken($color-secundario, 10%);
-                transform: scale(1.05); 
-            }
-        }
+    .titulo {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      color: $color-texto;
     }
+
+    .descripcion1 {
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      color: $color-texto;
+    }
+
+    .descripcion2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      color: $color-texto;
+    }
+
+    .boton-cta {
+      background-color: $color-secundario;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($color-secundario, 10%);
+        transform: scale(1.05); 
+      }
+    }
+  }
 }
 
 .seccion-caracteristicas {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
 
-    .item-caracteristica {
-        background: $fondo-etiquetas;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        width: 30%;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-
-        .titulo-caracteristica {
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-          color: $color-texto;
-            margin-bottom: 10px;
-        }
-
-        .descripcion-caracteristica {
-            font-size: 1rem;
-        }
-
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-    }
-}
-
-.pie-sitio {
-    background-color: $color-primario;
-    color: white;
+  .item-caracteristica {
+    background: rgba(104, 8, 195, 0.2901960784);
+    border-radius: 74px;
     padding: 20px;
     text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 
-    .contenido-pie {
+    .titulo-caracteristica {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      color: $color-texto;
+      margin-bottom: 10px;
+    }
+
+    .descripcion-caracteristica {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.footer {
+  background-color: $color-primario;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  .contenido-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .enlaces-pie {
+      margin-bottom: 15px;
+      a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $color-secundario;
+        }
+      }
+    }
+
+    .redes-sociales {
+      margin-bottom: 15px;
+      .icono-social {
+        margin: 0 10px;
+        color: white;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $color-secundario;
+        }
+      }
+    }
+
+    .suscripcion-newsletter {
+      margin-bottom: 15px;
+      form {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
 
-        .enlaces-pie {
-            margin-bottom: 15px;
-            a {
-                color: white;
-                margin: 0 10px;
-                text-decoration: none;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: $color-secundario;
-                }
-            }
+        .input-newsletter {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
         }
 
-        .redes-sociales {
-            margin-bottom: 15px;
-            .icono-social {
-                margin: 0 10px;
-                color: white;
-                transition: color 0.3s;
+        .boton-newsletter {
+          background-color: $color-secundario;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          transition: background 0.3s;
 
-                &:hover {
-                    color: $color-secundario;
-                }
-            }
+          &:hover {
+            background-color: darken($color-secundario, 10%);
+          }
         }
-
-        .suscripcion-newsletter {
-            margin-bottom: 15px;
-            form {
-                display: flex;
-                gap: 10px;
-
-                .input-newsletter {
-                    padding: 10px;
-                    border-radius: 5px;
-                    border: 1px solid #ccc;
-                }
-
-                .boton-newsletter {
-                    background-color: $color-secundario;
-                    color: white;
-                    border: none;
-                    padding: 10px 15px;
-                    border-radius: 5px;
-                    transition: background 0.3s;
-
-                    &:hover {
-                        background-color: darken($color-secundario, 10%);
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
-    .texto-pie {
-        margin-top: 10px;
-        font-size: 0.9rem;
-    }
+  .texto-pie {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
 }

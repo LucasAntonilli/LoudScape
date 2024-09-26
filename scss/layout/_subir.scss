@@ -16,7 +16,6 @@
   }
 
   form {
-    // Fieldset Styling
     fieldset {
       border: 2px solid $color-primario;
       border-radius: 8px;
@@ -62,14 +61,12 @@
           resize: vertical;
         }
 
-        // Styling para el input de tipo file
         input[type="file"] {
           padding: 0.5rem 1rem;
         }
       }
     }
 
-    // Botón de Envío
     .btn-primary {
       background-color: $color-secundario;
       border: none;
